@@ -10,6 +10,26 @@ const questions = [
     options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
     answer: "Hazrat Muhammad"
   },
+  {
+    question: "Who Is the Last Prophet Of Allah?",
+    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
+    answer: "Hazrat Muhammad"
+  },
+  {
+    question: "Who Is the Last Prophet Of Allah?",
+    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
+    answer: "Hazrat Muhammad"
+  },
+  {
+    question: "Who Is the Last Prophet Of Allah?",
+    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
+    answer: "Hazrat Muhammad"
+  },
+  {
+    question: "Who Is the Last Prophet Of Allah?",
+    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
+    answer: "Hazrat Muhammad"
+  },
   // Add more questions here
 ];
 
