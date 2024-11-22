@@ -13,7 +13,7 @@
     flex-direction: column;
   }
   
-  button {
+.button {
     margin: 10px 0;
     padding: 10px;
     border: none;
@@ -23,11 +23,11 @@
     transition: background-color 0.3s;
   }
   
-  button:hover {
+.button:hover {
     background-color: #d4d4d4;
   }
   
-  button.selected {
+.button.selected {
     background-color: #bada55;
   }
   
