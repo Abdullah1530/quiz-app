@@ -1,34 +1,33 @@
-// components/Quiz.js
 "use client";
 
-import React, { useState } from 'react';
-import styles from '../src/styles/Home.module.css';
+import React, { useState } from "react";
+import styles from "../src/styles/Home.module.css";
 
 const questions = [
   {
     question: "Who Is the Last Prophet Of Allah?",
     options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
-    answer: "Hazrat Muhammad"
+    answer: "Hazrat Muhammad",
   },
   {
-    question: "Who Is the Last Prophet Of Allah?",
-    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
-    answer: "Hazrat Muhammad"
+    question: "What is the holy book of Islam?",
+    options: ["Quran", "Bible", "Toraat", "Injeel"],
+    answer: "Quran",
   },
   {
-    question: "Who Is the Last Prophet Of Allah?",
+    question: "Who Is the First Prophet Of Allah?",
     options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
-    answer: "Hazrat Muhammad"
+    answer: "Hazrat Adam",
   },
   {
-    question: "Who Is the Last Prophet Of Allah?",
-    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
-    answer: "Hazrat Muhammad"
+    question: "What is the holy month of fasting in Islam?",
+    options: ["Shawwal", "Rajab", "Ramadan", "Muharram"],
+    answer: "Ramadan",
   },
   {
-    question: "Who Is the Last Prophet Of Allah?",
-    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
-    answer: "Hazrat Muhammad"
+    question: "How many times do Muslims pray daily?",
+    options: ["3", "5", "7", "9"],
+    answer: "5",
   },
   // Add more questions here
 ];
@@ -59,6 +58,14 @@ const Quiz = () => {
     }));
   };
 
+  const playAgain = () => {
+    setState({
+      currentQuestion: 0,
+      score: 0,
+      answered: false,
+    });
+  };
+
   const { currentQuestion, answered, score } = state;
   const question = questions[currentQuestion];
 
@@ -70,20 +77,31 @@ const Quiz = () => {
           <div className={styles.question}>{question.question}</div>
           <ul className={styles.options}>
             {question.options.map((option, index) => (
-              <li key={index} className={styles.option} onClick={() => handleAnswer(option)}>
+              <li
+                key={index}
+                className={styles.option}
+                onClick={() => handleAnswer(option)}
+              >
                 {option}
               </li>
             ))}
           </ul>
           {answered && (
             <button className={styles.button} onClick={nextQuestion}>
-              {currentQuestion + 1 < questions.length ? "Next Question" : "See Results"}
+              {currentQuestion + 1 < questions.length
+                ? "Next Question"
+                : "See Results"}
             </button>
           )}
         </>
       ) : (
         <div className={styles.result}>
-          <p>Quiz completed! Your score is {score} out of {questions.length}.</p>
+          <p>
+            Quiz completed! Your score is {score} out of {questions.length}.
+          </p>
+          <button className={styles.button} onClick={playAgain}>
+            Play Again
+          </button>
         </div>
       )}
     </div>
