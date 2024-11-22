@@ -1,4 +1,5 @@
-// components/Quiz.js
+"use client";
+
 import React, { useState } from 'react';
 
 const questions = [
