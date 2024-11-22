@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 
 const questions = [
   {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Madrid", "Paris", "Rome"],
-    answer: "Paris"
+    question: "Who Is the Last Prophet Of Allah?",
+    options: ["Hazrat Adam", "Hazrat Nooh", "Hazrat Muhammad", "Hazrat Ibrahim"],
+    answer: "Hazrat Muhammad"
   },
   // Add more questions here
 ];
