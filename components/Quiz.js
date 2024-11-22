@@ -1,6 +1,8 @@
+// components/Quiz.js
 "use client";
 
 import React, { useState } from 'react';
+import styles from '../src/styles/Home.module.css';
 
 const questions = [
   {
@@ -41,26 +43,26 @@ const Quiz = () => {
   const question = questions[currentQuestion];
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       {question ? (
         <>
-          <h1>Quiz App</h1>
-          <div className="question">{question.question}</div>
-          <ul className="options">
+          <h1 className={styles.heading}>Quiz App</h1>
+          <div className={styles.question}>{question.question}</div>
+          <ul className={styles.options}>
             {question.options.map((option, index) => (
-              <li key={index} className="option" onClick={() => handleAnswer(option)}>
+              <li key={index} className={styles.option} onClick={() => handleAnswer(option)}>
                 {option}
               </li>
             ))}
           </ul>
           {answered && (
-            <button className="button" onClick={nextQuestion}>
+            <button className={styles.button} onClick={nextQuestion}>
               {currentQuestion + 1 < questions.length ? "Next Question" : "See Results"}
             </button>
           )}
         </>
       ) : (
-        <div className="result">
+        <div className={styles.result}>
           <p>Quiz completed! Your score is {score} out of {questions.length}.</p>
         </div>
       )}

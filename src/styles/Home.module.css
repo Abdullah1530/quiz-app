@@ -1,4 +1,6 @@
 /* src/styles/Home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 .container {
   max-width: 700px;
   margin: 50px auto;
@@ -35,8 +37,8 @@
   color: #ffffff;
   padding: 15px;  /* More padding */
   margin: 10px 0;
-  border: none;
-  border-radius: 4px;
+  border: 2px solid #16a085;  /* Border to make it stand out */
+  border-radius: 8px;  /* More rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
   text-align: center;
@@ -44,8 +46,17 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);  /* Slight shadow */
 }
 
+.option:nth-child(even) {
+  background-color: #3498db;
+  border-color: #2980b9;
+}
+
+.option:nth-child(odd) {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+}
+
 .option:hover {
-  background-color: #16a085;
   transform: translateY(-3px);  /* Slight lift on hover */
 }
 
@@ -53,10 +64,10 @@
   display: block;
   width: 100%;
   padding: 15px;  /* More padding */
-  background-color: #3498db;  /* Different background color */
+  background-color: #f39c12;  /* Bright background color */
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -66,7 +77,7 @@
 }
 
 .button:hover {
-  background-color: #2980b9;
+  background-color: #e67e22;
   transform: translateY(-3px);  /* Slight lift on hover */
 }
 
