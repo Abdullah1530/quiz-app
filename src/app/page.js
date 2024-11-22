@@ -1,5 +1,5 @@
 // src/app/page.js
-import Quiz from '../components/Quiz';
+import Quiz from '../components/Quiz.js';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
